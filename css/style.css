@@ -156,6 +156,41 @@ body {
   margin: 0;
 }
 
+.tampilHasil span.jumlah-kasus {
+  margin-top: 8px;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.tampilHasil span.tambahan-kasus {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.detail-tambahan {
+  display: flex;
+  justify-content: left;
+  margin-top: 8px;
+}
+
+.detail-tambahan .icon-up {
+  order: 1;
+  background: url('/img/up.png');
+  height: 24px;
+  width: 24px;
+  display: block;
+  margin-right: 12px;
+}
+
+.detail-tambahan .tambahan-kasus {
+  margin-left: 60px;
+  order: 1;
+}
+
+
+
 .positif {
   grid-column-start: start;
   background-color: #F47961;

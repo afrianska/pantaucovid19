@@ -48,21 +48,43 @@ function tampilHasil(dataResult) {
   return `
         <div class="positif">
           <h5>Positif</h5>
-          <p class="pasien-positif">${dataResult.confirmed}</p>
+          <span class="jumlah-kasus">${new Intl.NumberFormat().format(
+            dataResult.confirmed
+          )}</span>
+          <div class="detail-tambahan">
+            <span class="icon-up"></span>
+            <span class="tambahan-kasus">95</span>
+          </div>
         </div>
         <div class="perawatan">
           <h5>Perawatan</h5>
-          <p class="pasien-perawatan">${
-            dataResult.confirmed - dataResult.recovered
-          }</p>
+          <span class="jumlah-kasus">${new Intl.NumberFormat().format(
+            dataResult.confirmed - (dataResult.recovered + dataResult.death)
+          )}</span>
+          <div class="detail-tambahan">
+            <span class="icon-up"></span>
+            <span class="tambahan-kasus">95</span>
+          </div>
         </div>
         <div class="sembuh">
           <h5>Sembuh</h5>
-          <p class="pasien-sembuh">${dataResult.recovered}</p>
+          <span class="jumlah-kasus">${new Intl.NumberFormat().format(
+            dataResult.recovered
+          )}</span>
+          <div class="detail-tambahan">
+            <span class="icon-up"></span>
+            <span class="tambahan-kasus">95</span>
+          </div>
         </div>
         <div class="meninggal">
           <h5>Meninggal</h5>
-          <p class="pasien-meninggal">${dataResult.death}</p>
+          <span class="jumlah-kasus">${new Intl.NumberFormat().format(
+            dataResult.death
+          )}</span>
+          <div class="detail-tambahan">
+            <span class="icon-up"></span>
+            <span class="tambahan-kasus">95</span>
+          </div>
         </div>
   `;
 }
