@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 72px;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  width: 1180px;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  /* align-items: center; */
+}
+
+.navbar-brand,
+.navbar-menu,
+.navbar-button {
+  display: flex;
+  order: 1;
+  margin: 20px 0;
+}
+
+.navbar .navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item img {
+  align-items: center;
+}
+
+.toggle,
+.navbar-toggle,
+.instan-button {
+  display: none;
+}
+
+.navbar-menu {
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list a.navbar-item {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.menu-list a.navbar-item:hover {
+  color: #f47961;
+}
+
+.menu-list a.active {
+  border-bottom-style: solid;
+  border-bottom-color: #f47961;
+  border-bottom-width: 1px;
+}
+
+.navbar-button {
+  display: flex;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  width: auto;
+}
+
+.navbar-button a {
+  padding: 3px 18px;
+  color: #b3b3b3;
+  margin: 0px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.navbar-button a:hover {
+  color: #f47961;
+}
+
+.navbar-button a.active {
+  background-color: #4d4d4d;
+  color: #f47961;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  left: 0;
+  margin-top: 72px;
+  justify-content: center;
+}
+
+.content {
+  width: 1180px;
+}
+
+.select-lokasi {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.select-lokasi select {
+  width: 280px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  border-style: none;
+}
+
+/* result card */
+.tampilHasil {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: [start] 280px [space-1] 20px [coloumn-1] 280px [space-2] 20px [coloumn-2] 280px [space-3] 20px [end] 280px;
+  grid-template-rows: 186px;
+  grid-auto-flow: row;
+  color: white;
+}
+
+.tampilHasil div {
+  /* image background */
+  background-image: url('/img/covid.png');
+  background-position: 165px -15px;
+  background-repeat: no-repeat;
+  background-size: 165px;
+}
+
+.tampilHasil h5 {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.positif {
+  grid-column-start: start;
+  background-color: #F47961;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.perawatan {
+  grid-column-start: coloumn-1;
+  background-color: #FAC661;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.sembuh {
+  grid-column-start: coloumn-2;
+  background-color: #1EB971;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.meninggal {
+  grid-column-start: end;
+  background-color: #4D4D4D;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+/* Media device 1050px */
+@media all and (max-width: 1050px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav {
+    height: auto;
+  }
+
+  .navbar-button {
+    display: none;
+  }
+
+  .navbar {
+    order: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  .navbar-brand,
+  .navbar-menu {
+    display: flex;
+    margin: 15px 0;
+  }
+
+  .navbar-menu {
+    justify-content: space-between;
+  }
+
+  .menu-list,
+  .instan-button {
+    order: 1;
+  }
+
+  .menu-list {
+    margin-right: 20px;
+  }
+
+  .menu-list a.navbar-item {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .instan-button {
+    display: flex;
+    order: 1;
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin-right: 20px;
+  }
+
+  .instan-button .navbar-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .main {
+    margin-top: 65px;
+    width: auto;
+  }
+
+  .content {
+    margin: 0 20px;
+  }
+}
+
+
+
+
+/* Media device 600px */
+@media all and (max-width: 600px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav {
+    height: auto;
+  }
+
+  .navbar-menu,
+  .navbar-button,
+  .instan-button {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0 20px;
+    padding: 0;
+  }
+
+  .navbar-brand,
+  .toggle {
+    display: flex;
+    order: 1;
+    margin: 15px 0;
+  }
+
+  /* toggle menu start */
+  .navbar-toggle {
+    /* display flex to show */
+    display: none;
+    float: left;
+    position: fixed;
+    flex-flow: column wrap;
+    margin-top: 55px;
+    background-color: #f47961;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .toggle-list,
+  .toggle-button {
+    padding: 0;
+    margin: 0;
+    order: 1;
+  }
+
+  .toggle-list {
+    background-color: #f47961;
+  }
+
+  .toggle-list li {
+    border-bottom-style: solid;
+    border-bottom-color: rgba(255, 255, 255, 0.25);
+    border-bottom-width: 1px;
+  }
+
+  .toggle-list a.toggle-item {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 16px;
+  }
+
+  .toggle-button {
+    display: block;
+    flex-flow: row nowrap;
+    width: auto;
+    padding: 16px;
+    background-color: white;
+  }
+
+  .toggle-button a {
+    padding: 3px 18px;
+    color: #b3b3b3;
+    margin: 0;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+
+  .toggle-button a:hover {
+    color: #f47961;
+  }
+
+  .toggle-button a.active {
+    background-color: #4d4d4d;
+    color: #f47961;
+  }
+
+  /* toggle menu end */
+
+  .main {
+    margin-top: 57px;
+    width: auto;
+  }
+
+  .content {
+    margin: 0 20px;
+  }
+
+  .select-lokasi {
+    margin-top: 16px;
+  }
+
+  .select-lokasi select {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border-style: none;
+  }
+
+  .tampilHasil {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 15fr 2fr 15fr;
+    grid-template-rows: auto 20px auto;
+    grid-auto-flow: row;
+    color: white;
+  }
+
+  .positif {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+
+  .perawatan {
+    grid-column-start: 3;
+    grid-row-start: 1;
+  }
+
+  .sembuh {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+
+  .meninggal {
+    grid-column-start: 3;
+    grid-row-start: 3;
+
+  }
+
+
+
+}
