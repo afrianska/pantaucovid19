@@ -1,23 +1,51 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll(".navbar-burger"),
-    0
-  );
+cariDB();
 
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-    // Add a click event on each of them
-    $navbarBurgers.forEach(el => {
-      el.addEventListener("click", () => {
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+// -------------- js style for chart
+var ctx = document.getElementById("dataStatisik").getContext("2d");
+var cPostif = new Chart(ctx, {
+  // The type of chart we want to create
+  type: "bar",
 
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
-      });
-    });
-  }
+  // The data for our dataset
+  data: {
+    labels: [
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+      "01/03",
+    ],
+    datasets: [
+      {
+        label: "Data Positif",
+        backgroundColor: "#F47961",
+        borderColor: "#E6E6E6",
+        data: [40, 150, 57, 205, 190, 106, 59, 41, 87, 60, 100],
+      },
+    ],
+  },
+
+  // Configuration options go here
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      yAxes: [
+        {
+          ticks: {
+            beginAtZero: true,
+          },
+        },
+      ],
+    },
+  },
+
+  // end
 });
+
+// console.log(cariDB());

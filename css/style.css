@@ -5,6 +5,12 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   font-size: 18px;
+  color: #1A1A1A;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
 }
 
 .nav {
@@ -142,12 +148,16 @@ body {
   color: white;
 }
 
-.tampilHasil div {
+.positif,
+.sembuh,
+.perawatan,
+.meninggal {
   /* image background */
-  background-image: url('/img/covid.png');
-  background-position: 165px -15px;
+  background-image: url('/img/covid.svg');
   background-repeat: no-repeat;
-  background-size: 165px;
+  background-position-x: 165px;
+  background-position-y: -45px;
+  background-size: 200px;
 }
 
 .tampilHasil h5 {
@@ -189,13 +199,12 @@ body {
   order: 1;
 }
 
-
-
 .positif {
   grid-column-start: start;
   background-color: #F47961;
   border-radius: 4px;
   padding: 24px;
+  box-shadow: 0px 8px 20px 0px rgba(142, 172, 141, 0.15);
 }
 
 .perawatan {
@@ -203,6 +212,7 @@ body {
   background-color: #FAC661;
   border-radius: 4px;
   padding: 24px;
+  box-shadow: 0px 8px 20px 0px rgba(142, 172, 141, 0.15);
 }
 
 .sembuh {
@@ -210,6 +220,7 @@ body {
   background-color: #1EB971;
   border-radius: 4px;
   padding: 24px;
+  box-shadow: 0px 8px 20px 0px rgba(142, 172, 141, 0.15);
 }
 
 .meninggal {
@@ -217,6 +228,165 @@ body {
   background-color: #4D4D4D;
   border-radius: 4px;
   padding: 24px;
+  box-shadow: 0px 8px 20px 0px rgba(142, 172, 141, 0.15);
+}
+
+.date-details {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dateUpdate,
+.details {
+  order: 1;
+  display: flex;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.arrow-next {
+  display: block;
+  background-image: url('/img/arrow-right.svg');
+  margin-left: 12px;
+}
+
+/* data sebaran dan statistik */
+.overview {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: [start] 580px [space] 20px [end] 580px;
+  grid-template-rows: 525px;
+  grid-auto-flow: row;
+}
+
+.data-sebaran {
+  grid-column-start: start;
+  box-shadow: 0px 8px 20px 0px rgba(142, 172, 141, 0.15);
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.statistik {
+  grid-column-start: end;
+  box-shadow: 0px 8px 20px 0px rgba(142, 172, 141, 0.15);
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.data-sebaran h4 {
+  margin: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.table-sebaran {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.table-sebaran tr.title-table {
+  font-size: 14px;
+  font-weight: 600;
+  border-top: 1px solid #E6E6E6;
+}
+
+.table-sebaran tr {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  font-size: 14px;
+  font-weight: 300;
+  border-bottom: 1px solid #E6E6E6;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.title-lokasi {
+  color: #B3B3B3;
+}
+
+.title-positif {
+  color: #F47961;
+}
+
+.title-sembuh {
+  color: #1EB971;
+}
+
+.title-meninggal {
+  color: #4D4D4D;
+}
+
+.table-sebaran th,
+.table-sebaran td {
+  padding: 12px 0;
+  text-align: left;
+}
+
+/* Data Statistik */
+.statistik {}
+
+.title-statistik {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.title-statistik h4 {
+  order: 1;
+  margin: 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.title-statistik .title-positif,
+.title-statistik .title-perawatan,
+.title-statistik .title-sembuh,
+.title-statistik .title-meninggal {
+  font-weight: 800;
+}
+
+.tombolPilih {
+  order: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 24px;
+}
+
+.icon-prev {
+  order: 1;
+  display: block;
+  background-image: url('/img/chevron-left.svg');
+  width: 24px;
+  height: 24px;
+}
+
+.icon-next {
+  order: 1;
+  display: block;
+  background-image: url('/img/chevron-right.svg');
+  width: 24px;
+  height: 24px;
+  margin-left: 12px;
+}
+
+.data-statistik {
+  margin-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  height: 406px;
+  width: auto;
 }
 
 /* Media device 1050px */

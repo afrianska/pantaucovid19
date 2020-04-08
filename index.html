@@ -78,10 +78,55 @@
           <div class="tampilHasil">
             <!-- Tempat nampilin data -->
           </div>
+
+          <!-- date and link details -->
+          <div class="date-details">
+            <div class="dateUpdate"><span>Last Update: 27 Maret 2020</span></div>
+            <a class="details" href="">Details<span class="icon arrow-next"></span></a>
+          </div>
+
+          <!-- Data persebaran & statistik -->
+          <div class="overview">
+            <div class="data-sebaran">
+              <h4>Daftar Lokasi Persebaran Covid-19</h4>
+              <table class="table-sebaran">
+                <tr class="title-table">
+                  <th class="title-lokasi">Lokasi</th>
+                  <th class="title-positif">Positif</th>
+                  <th class="title-sembuh">Sembuh</th>
+                  <th class="title-meninggal">Meninggal</th>
+                </tr>
+                <tr>
+                  <td>Margodadi</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                </tr>
+              </table>
+            </div>
+            <div class="statistik">
+              <div class="title-statistik">
+                <h4>Statistik Kasus <span class="title-positif">Positif</span> di <span>Metro - Lampung</span></h4>
+                <div class="tombolPilih">
+                  <a href=""><span class="icon-prev"></span></a>
+                  <a href=""><span class="icon-next"></span></a>
+                </div>
+              </div>
+
+              <div class="data-statistik">
+                <canvas id="dataStatisik"></canvas>
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="js/script.js"></script>
+    <script src="js/style-script.js"></script>
 </body>
 
 </html>
