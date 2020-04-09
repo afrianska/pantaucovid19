@@ -1,6 +1,8 @@
 async function eksekusi() {
   const dataResult = await cariDB();
   document.querySelector(".tampilHasil").innerHTML = tampilHasil(dataResult);
+  document.querySelector(".dateUpdate").innerHTML = dataUpdate(dataResult);
+  // console.log(dataResult);
 }
 
 document.querySelector("#lokasi").addEventListener("change", function () {
@@ -34,10 +36,18 @@ async function cariDB() {
     `https://covid19.mathdro.id/api${dataLokasi}`
   ).then((data) => data.deaths.value);
 
+  const lastUpdate = await getDataCovid(
+    `https://covid19.mathdro.id/api${dataLokasi}`
+  ).then((data) => data.lastUpdate);
+  const dateUpdate = new Date(lastUpdate).toDateString();
+
+  console.log(new Date(lastUpdate).toDateString());
+
   const dataAkhir = {
     confirmed: confirmed,
     recovered: recovered,
     death: death,
+    lastupdate: dateUpdate,
   };
 
   return dataAkhir;
@@ -87,4 +97,8 @@ function tampilHasil(dataResult) {
           </div>
         </div>
   `;
+}
+
+function dataUpdate(dataResult) {
+  return `<span>Last Update: ${dataResult.lastupdate}</span>`;
 }
